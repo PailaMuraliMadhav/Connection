@@ -5,11 +5,11 @@ import cors from "cors";
 const app = express();
 
 
-var corsOptions = {
-  origin: "http://localhost:5173",
+const corsOptions = {
+  origin: ["http://localhost:5173", "https://connection13.vercel.app"],
   optionsSuccessStatus: 200,
-  
 };
+
 app.use(cors(corsOptions))
 
 app.get("/",(req,res)=>{
