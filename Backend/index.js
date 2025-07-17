@@ -16,9 +16,9 @@ app.get("/",(req,res)=>{
     res.send("PSPK ")
 })
 
-app.get("/users",(req,res)=>{
-    res.send(users)
-})
+app.get("/users", (req, res) => {
+  res.json(users); // Make sure 'users' is imported and valid
+});
 
 
 const PORT =process.env.PORT || 8000;

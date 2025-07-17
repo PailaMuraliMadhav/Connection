@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-const response = await axios.get("https://your-backend-service.onrender.com/users");
+const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/users`);
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
